@@ -1,14 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Pokedex from "./pages/Pokedex";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import PageNotFound from "./pages/PageNotFound";
+import LoadinPage from "./pages/LoadinPage";
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+        <Route exact path={"/"} component={Pokedex} />
+        <Route exact path={"/loading"} component={LoadinPage} />
+        <Route path="*" component={PageNotFound} />
+      </Switch>
+    </Router>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
