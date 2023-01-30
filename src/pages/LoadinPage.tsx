@@ -19,7 +19,7 @@ export default function LoadinPage() {
     <div style={styles.container}>
       <Header />
 
-      <div style={styles.text}>Catch THEM ALLL!!!!!</div>
+      <div style={styles.text}>Mommy  Jennina Balba Iloveyou!!!!</div>
 
 
       <Footer />
